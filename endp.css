@@ -1,0 +1,169 @@
+/* Кітапхана жобасына арналған CSS файлы */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Негізгі фон түсі */
+    color: #333; /* Мәтін түсі */
+    min-height: 100vh; /* Беттің минималды биіктігі */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Горизонтальды прокрутты алып тастау */
+}
+
+header {
+    background-color: #0077b6; /* Бас бөліктің түсі */
+    color: white; /* Мәтіннің ақ түсі */
+    text-align: center; /* Мәтінді ортасына туралау */
+    padding: 20px;
+    width: 100%; /* Толық ені */
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Тақырып шрифтінің өлшемі */
+}
+
+main {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px; /* Негізгі контенттің максималды ені */
+    box-sizing: border-box;
+    flex: 1;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 15px; /* Тақырыптың төменгі шекара арақашықтығы */
+}
+
+#filters {
+    display: flex; /* Икемді контейнер */
+    flex-wrap: wrap; /* Қатарға сыймаған элементтер келесі жолға өтеді */
+    gap: 10px;
+    padding: 10px;
+    background-color: #f2f2f2; /* Сүзгі бөлімінің түсі */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#filters input, #filters select, #filters button {
+    padding: 10px; /* Элементтердің ішкі кеңістігі */
+    font-size: 1rem; /* Шрифт өлшемі */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#filters button {
+    background-color: #0077b6; /* Батырма түсі */
+    color: white; /* Мәтін түсі */
+    cursor: pointer; /* Қол түрінде көрсетілетін курсор */
+}
+
+#filters button:hover {
+    background-color: #005f87; /* Батырмаға курсор тигендегі түс */
+}
+
+/* Кітаптар тізімі (Таблица) */
+table {
+    width: 100%; /* Толық ені */
+    border-collapse: collapse; /* Шекараларды біріктіру */
+    margin: 10px 0;
+    background-color: #fff; /* Ақ фон түсі */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Көлеңке беру */
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left; /* Мәтінді солға туралау */
+}
+
+table th {
+    background-color: #0077b6; /* Бас бағананың түсі */
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Жұп жолдардың түсі */
+}
+
+table tr:hover {
+    background-color: #e6f7ff; /* Курсор тигендегі түс */
+}
+
+/* Кітап мәртебесі */
+.available {
+    color: green; /* Қорда бар кітап түсі */
+    font-weight: bold; /* Мәтін қалыңдығы */
+}
+
+.borrowed {
+    color: red; /* Оқырмандағы кітап түсі */
+    font-weight: bold;
+}
+
+/* Рейтинг жұлдыздары */
+#rating-stars {
+    font-size: 2rem; /* Жұлдыздардың өлшемі */
+    cursor: pointer; /* Курсор түрі */
+    display: flex;
+    gap: 5px;
+    direction: ltr; /* Солдан оңға бағыт */
+}
+
+#rating-stars span {
+    color: gray; /* Әдепкі жұлдыз түсі */
+    transition: color 0.3s ease; /* Түстің біртіндеп өзгеруі */
+}
+
+#rating-stars span.selected,
+#rating-stars span:hover,
+#rating-stars span:hover ~ span {
+    color: gold; /* Белсенді жұлдыз түсі */
+}
+
+/* Пікір қосу бөлімінің стили */
+#add-review {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#review-form select, #review-form textarea, #review-form button {
+    width: 100%; /* Толық ені */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#review-form button {
+    background-color: #0077b6; /* Батырма түсі */
+    color: white;
+    cursor: pointer;
+}
+
+#review-form button:hover {
+    background-color: #005f87; /* Батырмаға курсор тигендегі түс */
+}
+
+/* Төменгі бөлім */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0077b6;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+}

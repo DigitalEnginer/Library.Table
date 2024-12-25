@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кітапхана</title>
+    <link rel="stylesheet" href="endp.css">
+</head>
+<body>
+    <!-- Жоғарғы бөлімі: тақырып -->
+    <header>
+        <h1>Кітапхана мәліметтері</h1>        
+    </header>
+
+    <main>
+        <!-- Іздеу және сүзгілеу бөлімі -->
+        <section id="filters">
+            <h2>Іздеу және сүзгілеу</h2>
+            <input type="text" id="search" placeholder="Кітап немесе авторды іздеу">
+            <!-- Жанр бойынша сүзу -->
+            <select id="genre-filter">
+                <option value="">Жанр бойынша сүзу</option>
+                <option value="Көркем әдебиет">Көркем әдебиет</option>
+                <option value="Классика">Классика</option>
+                <option value="Жеке даму">Жеке даму</option>
+                <option value="Әлемдік Классика">Әлемдік Классика</option>
+                <option value="Экономика и финансы">Экономика и финансы</option>
+                <option value="Психология">Психология</option>
+                <option value="Мемуары, Биография">Мемуары, Биография</option>
+                <option value="Тарих, Діни">Тарих, Діни</option>
+            </select>
+            <!-- Мәртебе бойынша сүзу -->
+            <select id="status-filter">
+                <option value="">Мәртебе бойынша сүзу</option>
+                <option value="Кітап қорында">Кітап қорында</option>
+                <option value="Оқырманда">Оқырманда</option>
+            </select>
+            <button id="search-button">Іздеу</button>
+            <button id="reset-button">Қалпына</button>
+        </section>
+
+        <!-- Кітаптар тізімі (таблица) -->
+        <section id="book-table">
+            <h2>Кітаптар тізімі</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Авторы</th>
+                        <th>Кітаптың аты</th>
+                        <th>Жанры</th>
+                        <th>Шығарылған жылы</th>
+                        <th>Беттер саны</th>
+                        <th>Қазір</th>
+                        <th>Рейтингі</th>
+                    </tr>
+                </thead>
+                <tbody id="book-list">
+                    <!-- JavaScript арқылы деректер қосылады -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Кітапқа пікір қосу бөлімі -->
+        <section id="add-review">
+            <h2>Кітапқа пікір қосу</h2>
+            <form id="review-form">
+                <!-- Кітапты таңдау -->
+                <select id="book-select">
+                    <option value="">Кітапты таңдаңыз</option>
+                    <!-- JavaScript арқылы тізім қосылады -->
+                </select>
+                <!-- Рейтинг қосу (жұлдыздар) -->
+                <div id="rating-stars">
+                    <span data-value="1">★</span>
+                    <span data-value="2">★</span>
+                    <span data-value="3">★</span>
+                    <span data-value="4">★</span>
+                    <span data-value="5">★</span>
+                </div>
+                <textarea id="review-text" placeholder="Пікіріңізді жазыңыз"></textarea>
+                <button type="submit">Пікір қосу</button>
+            </form>
+        </section>
+
+        <!-- Пікірлер көрсету бөлімі -->
+        <section id="reviews-container">
+            <!-- JavaScript арқылы пікірлер қосылады -->
+        </section>
+        
+    </main>
+
+    <!-- Төменгі бөлімі -->
+    <footer>
+        <p>© 2024 Кітапхана жүйесі</p>
+    </footer>
+
+    <script src="endp.js"></script>
+</body>
+</html>
